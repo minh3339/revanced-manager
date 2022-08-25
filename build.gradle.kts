@@ -20,3 +20,8 @@ allprojects {
         maven("https://jitpack.io")
     }
 }
+task generateVersionTxt {
+    doLast {
+        file("./version.txt").text = android.defaultConfig.versionName
+    }
+}
